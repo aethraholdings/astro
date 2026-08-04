@@ -8,7 +8,7 @@ function Button({
   className = "",
 }) {
   const styles =
-    "inline-flex items-center justify-center rounded-full bg-black text-white px-8 py-4 text-sm font-medium uppercase tracking-wide transition-all duration-300 hover:bg-zinc-800 hover:scale-105";
+    "inline-flex items-center justify-center rounded-full bg-black-300 text-white px-8 py-4 text-sm font-medium uppercase tracking-wide transition-all duration-300 hover:bg-zinc-400 hover:scale-105";
 
   if (to) {
     return (
