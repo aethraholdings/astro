@@ -1,30 +1,52 @@
-import { ArrowRight } from "lucide-react";
+import { Clock, ArrowRight } from "lucide-react";
 import Button from "../common/Button";
 
 function ServiceCard({ service }) {
-  const Icon = service.icon;
-
   return (
-    <div className="group rounded-3xl border border-stone-200 bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-      <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-amber-100 text-amber-700">
-        <Icon size={30} />
+    <div className="group overflow-hidden rounded-[32px] bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+      <div className="overflow-hidden">
+        <img
+          src={service.image}
+          alt={service.title}
+          className="h-72 w-full object-cover transition duration-500 group-hover:scale-110"
+        />
       </div>
 
-      <h3 className="mb-4 text-2xl font-medium">
-        {service.title}
-      </h3>
+      <div className="p-8">
+        <span className="rounded-full bg-amber-100 px-3 py-1 text-sm text-amber-700">
+          {service.category}
+        </span>
 
-      <p className="mb-8 leading-7 text-zinc-600">
-        {service.description}
-      </p>
+        <h3 className="mt-5 text-2xl font-semibold">
+          {service.title}
+        </h3>
 
-      <Button
-        to="/services"
-        className="bg-transparent px-0 text-black hover:bg-transparent hover:text-amber-700"
-      >
-        Learn More
-        <ArrowRight size={18} className="ml-2" />
-      </Button>
+        <p className="mt-4 leading-7 text-zinc-600">
+          {service.description}
+        </p>
+
+        <div className="mt-6 flex items-center justify-between">
+          <div className="flex items-center gap-2 text-zinc-500">
+            <Clock size={18} />
+            {service.duration}
+          </div>
+
+          <div className="text-2xl font-bold text-amber-700">
+            {service.price}
+          </div>
+        </div>
+
+        <div className="mt-8 flex justify-between">
+          <Button to={`/services/${service.slug}`}>
+            Learn More
+          </Button>
+
+          <Button to="/booking">
+            Book
+            <ArrowRight size={18} />
+          </Button>
+        </div>
+      </div>
     </div>
   );
 }
