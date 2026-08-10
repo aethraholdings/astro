@@ -9,17 +9,19 @@ import Booking from "../pages/Booking";
 import Contact from "../pages/Contact";
 import Blog from "../pages/Blog";
 import NotFound from "../pages/NotFound";
+import BlogDetails from "../pages/BlogDetails";
 
 function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="services" element={<Services />} />
-        <Route path="booking" element={<Booking />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="blog" element={<Blog />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/booking" element={<Booking />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogDetails />} />
       </Route>
 
       <Route path="*" element={<NotFound />} />

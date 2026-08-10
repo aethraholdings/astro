@@ -1,8 +1,22 @@
+import ContactHero from "../components/contact/ContactHero";
+import ContactForm from "../components/contact/ContactForm";
+import ContactInfo from "../components/contact/ContactInfo";
+import ContactFAQ from "../components/contact/ContactFAQ";
+import ContactCTA from "../components/contact/ContactCTA";
+
 function Contact() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-5xl font-bold">Contact Page</h1>
-    </div>
+    <>
+      <ContactHero />
+
+      <ContactForm />
+
+      <ContactInfo />
+
+      <ContactFAQ />
+
+      <ContactCTA />
+    </>
   );
 }
 
