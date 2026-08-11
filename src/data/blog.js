@@ -9,7 +9,7 @@ const blogPosts = [
     author: "Crystal Blissed",
     date: "August 5, 2026",
     readTime: "7 min read",
-    image: "/images/blog/birth-chart.jpg",
+    image: "/images/blog/birth-chart.png",
     featured: true,
 
     content: [
@@ -75,7 +75,7 @@ const blogPosts = [
     author: "Crystal Blissed",
     date: "July 28, 2026",
     readTime: "5 min read",
-    image: "/images/blog/mercury-retrograde.jpg",
+    image: "/images/blog/mercury-retrograde.png",
 
     content: [
       {
@@ -129,7 +129,7 @@ const blogPosts = [
     author: "Crystal Blissed",
     date: "July 20, 2026",
     readTime: "6 min read",
-    image: "/images/blog/tarot.jpg",
+    image: "/images/blog/tarot.png",
 
     content: [
       {
@@ -183,7 +183,7 @@ const blogPosts = [
     author: "Crystal Blissed",
     date: "July 12, 2026",
     readTime: "8 min read",
-    image: "/images/blog/career.jpg",
+    image: "/images/blog/career.png",
 
     content: [
       {
@@ -226,7 +226,7 @@ const blogPosts = [
     author: "Crystal Blissed",
     date: "July 5, 2026",
     readTime: "5 min read",
-    image: "/images/blog/numerology.jpg",
+    image: "/images/blog/numerology.png",
 
     content: [
       {
@@ -269,7 +269,7 @@ const blogPosts = [
     author: "Crystal Blissed",
     date: "June 27, 2026",
     readTime: "7 min read",
-    image: "/images/blog/relationships.jpg",
+    image: "/images/blog/relationship.png",
 
     content: [
       {
@@ -312,7 +312,7 @@ const blogPosts = [
     author: "Crystal Blissed",
     date: "June 19, 2026",
     readTime: "6 min read",
-    image: "/images/blog/crystals.jpg",
+    image: "/images/blog/crystals.png",
 
     content: [
       {
@@ -344,7 +344,7 @@ const blogPosts = [
     author: "Crystal Blissed",
     date: "June 10, 2026",
     readTime: "7 min read",
-    image: "/images/blog/vastu.jpg",
+    image: "/images/blog/vastu.png",
 
     content: [
       {
