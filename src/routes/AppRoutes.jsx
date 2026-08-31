@@ -11,20 +11,91 @@ import Blog from "../pages/Blog";
 import NotFound from "../pages/NotFound";
 import BlogDetails from "../pages/BlogDetails";
 
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+
+import ProtectedRoute from "../components/auth/ProtectedRoute";
+
 function AppRoutes() {
   return (
     <Routes>
+
+      {/* =========================================
+          MAIN WEBSITE
+      ========================================= */}
+
       <Route path="/" element={<MainLayout />}>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogDetails />} />
+
+        <Route
+          index
+          element={<Home />}
+        />
+
+        <Route
+          path="about"
+          element={<About />}
+        />
+
+        <Route
+          path="services"
+          element={<Services />}
+        />
+
+        <Route
+          path="contact"
+          element={<Contact />}
+        />
+
+        <Route
+          path="blog"
+          element={<Blog />}
+        />
+
+        <Route
+          path="blog/:slug"
+          element={<BlogDetails />}
+        />
+
+        {/* =========================================
+            PROTECTED BOOKING
+        ========================================= */}
+
+        <Route
+          path="booking"
+          element={
+            <ProtectedRoute>
+              <Booking />
+            </ProtectedRoute>
+          }
+        />
+
       </Route>
 
-      <Route path="*" element={<NotFound />} />
+
+      {/* =========================================
+          AUTHENTICATION
+      ========================================= */}
+
+      <Route
+        path="/login"
+        element={<Login />}
+      />
+
+      <Route
+        path="/register"
+        element={<Register />}
+      />
+
+
+      {/* =========================================
+          404
+      ========================================= */}
+
+      <Route
+        path="*"
+        element={<NotFound />}
+      />
+
     </Routes>
   );
 }

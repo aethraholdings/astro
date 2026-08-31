@@ -1,7 +1,11 @@
+import { useAuth } from "../../context/AuthContext";
 import { useBooking } from "../../context/BookingContext";
+import { useBooking } from "../../context/BookingContext";
+
 
 function PersonalDetails() {
 
+  const { user } = useAuth();
   const { booking, updateBooking, setStep } = useBooking();
 
   return (

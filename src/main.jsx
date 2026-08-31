@@ -7,8 +7,11 @@ import { BookingProvider } from "./context/BookingContext";
 import App from "./App";
 import "./index.css";
 
+import { AuthProvider } from "./context/AuthContext";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <AuthProvider>
     <HelmetProvider>
       <BrowserRouter>
       <BookingProvider>
@@ -16,5 +19,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         </BookingProvider>
       </BrowserRouter>
     </HelmetProvider>
+    </AuthProvider>
   </React.StrictMode>
 );
