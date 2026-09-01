@@ -1,6 +1,5 @@
 import { useAuth } from "../../context/AuthContext";
 import { useBooking } from "../../context/BookingContext";
-import { useBooking } from "../../context/BookingContext";
 
 
 function PersonalDetails() {
@@ -21,14 +20,14 @@ function PersonalDetails() {
         <input
           placeholder="First Name"
           className="rounded-xl border p-4"
-          value={booking.firstName}
+          value={booking.firstName || ""}
           onChange={(e)=>updateBooking("firstName",e.target.value)}
         />
 
         <input
           placeholder="Last Name"
           className="rounded-xl border p-4"
-          value={booking.lastName}
+          value={booking.lastName || ""}
           onChange={(e)=>updateBooking("lastName",e.target.value)}
         />
 
@@ -37,14 +36,14 @@ function PersonalDetails() {
       <input
         className="mt-6 w-full rounded-xl border p-4"
         placeholder="Email"
-        value={booking.email}
+        value={booking.email || ""}
         onChange={(e)=>updateBooking("email",e.target.value)}
       />
 
       <input
         className="mt-6 w-full rounded-xl border p-4"
         placeholder="Phone"
-        value={booking.phone}
+        value={booking.phone || ""}
         onChange={(e)=>updateBooking("phone",e.target.value)}
       />
 
@@ -52,7 +51,7 @@ function PersonalDetails() {
         rows="5"
         className="mt-6 w-full rounded-xl border p-4"
         placeholder="Questions"
-        value={booking.question}
+        value={booking.question || ""}
         onChange={(e)=>updateBooking("question",e.target.value)}
       />
 
